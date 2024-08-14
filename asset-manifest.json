@@ -1,20 +1,32 @@
 {
   "files": {
     "main.css": "/Emart/static/css/main.063403bf.css",
-    "main.js": "/Emart/static/js/main.9e1c6b02.js",
+    "main.js": "/Emart/static/js/main.e5d6a7a9.js",
     "static/js/453.ed3810f9.chunk.js": "/Emart/static/js/453.ed3810f9.chunk.js",
+    "static/media/img2.jpg": "/Emart/static/media/img2.08c129cada6348074e3e.jpg",
+    "static/media/img4.jpg": "/Emart/static/media/img4.80fa1e526d76373a2f47.jpg",
+    "static/media/img3.jpg": "/Emart/static/media/img3.a2ce3e7ed4a65c45d557.jpg",
+    "static/media/iphone12promax.png": "/Emart/static/media/iphone12promax.714c65f4e238c0b227b6.png",
+    "static/media/img1.jpg": "/Emart/static/media/img1.aff43e06b85a6d64ae09.jpg",
+    "static/media/iphone12pro.png": "/Emart/static/media/iphone12pro.a0eca97b2d0615c787db.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/Emart/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/iphone11.png": "/Emart/static/media/iphone11.8a317cd10597763ccbf2.png",
+    "static/media/iphone12.png": "/Emart/static/media/iphone12.e9f1772f910bf5ec67f2.png",
+    "static/media/contact.png": "/Emart/static/media/contact.96c63c3c1d7b93fc0aec.png",
+    "static/media/iphone12mini.png": "/Emart/static/media/iphone12mini.bf22328378d81213bfa1.png",
+    "static/media/about.png": "/Emart/static/media/about.089f3557ff463d2cf78d.png",
+    "static/media/iphone11promax.png": "/Emart/static/media/iphone11promax.5ee7c0bb8f4069cd825a.png",
     "static/media/fontawesome-webfont.eot": "/Emart/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/Emart/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/Emart/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/Emart/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/Emart/index.html",
     "main.063403bf.css.map": "/Emart/static/css/main.063403bf.css.map",
-    "main.9e1c6b02.js.map": "/Emart/static/js/main.9e1c6b02.js.map",
+    "main.e5d6a7a9.js.map": "/Emart/static/js/main.e5d6a7a9.js.map",
     "453.ed3810f9.chunk.js.map": "/Emart/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.063403bf.css",
-    "static/js/main.9e1c6b02.js"
+    "static/js/main.e5d6a7a9.js"
   ]
 }
