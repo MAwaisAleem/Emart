@@ -1,9 +1,24 @@
 import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 const Login = () => {
+  const validationSchema = Yup.object({
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    password: Yup.string()
+      .min(6, "Password must be at least 6 characters")
+      .required("Password is required"),
+  });
+
+  const handleSubmit = (values, { setSubmitting, resetForm }) => {
+    console.log("Form Submitted", values);
+    alert("Login Successful");
+    resetForm();
+    setSubmitting(false);
+  };
+
   return (
     <>
-      {/* <!-- Button trigger modal --> */}
       <button
         type="button"
         className="btn btn-outline-primary ms-auto"
@@ -13,7 +28,6 @@ const Login = () => {
         <span className="fa fa-sign-in me-1"></span> Login
       </button>
 
-      {/* <!-- Modal --> */}
       <div
         className="modal fade"
         id="loginModal"
@@ -42,48 +56,71 @@ const Login = () => {
                 <span className="fa fa-facebook me-2"></span> Sign in With
                 Facebook
               </button>
-              <form>
-                <div className="mb-3">
-                  <label htmlFor="exampleInputEmail1" className="form-label">
-                    Email address
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                  />
-                  <div id="emailHelp" className="form-text">
-                    We'll never share your email with anyone else.
-                  </div>
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="exampleInputPassword1" className="form-label">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="exampleInputPassword1"
-                  />
-                </div>
-                <div className="mb-3 form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    id="exampleCheck1"
-                  />
-                  <label className="form-check-label" htmlFor="exampleCheck1">
-                    Check me out
-                  </label>
-                </div>
-                <button
-                  type="submit"
-                  className="btn btn-outline-primary w-100 mt-5"
-                >
-                  Submit
-                </button>
-              </form>
+              <Formik
+                initialValues={{ email: "", password: "" }}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
+              >
+                {({ isSubmitting }) => (
+                  <Form>
+                    <div className="mb-3">
+                      <label htmlFor="email" className="form-label">
+                        Email address
+                      </label>
+                      <Field
+                        type="email"
+                        className="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                      />
+                      <ErrorMessage
+                        name="email"
+                        component="div"
+                        className="text-danger" // 🔥 Bootstrap red color
+                      />
+                    </div>
+                    <div className="mb-3">
+                      <label htmlFor="password" className="form-label">
+                        Password
+                      </label>
+                      <Field
+                        type="password"
+                        className="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                      />
+                      <ErrorMessage
+                        name="password"
+                        component="div"
+                        className="text-danger" // 🔥 Bootstrap red color
+                      />
+                    </div>
+                    <div className="mb-3 form-check">
+                      <Field
+                        type="checkbox"
+                        className="form-check-input"
+                        id="exampleCheck1"
+                        name="remember"
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="exampleCheck1"
+                      >
+                        Remember me
+                      </label>
+                    </div>
+                    <button
+                      type="submit"
+                      className="btn btn-outline-primary w-100 mt-5"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Logging in..." : "Submit"}
+                    </button>
+                  </Form>
+                )}
+              </Formik>
             </div>
           </div>
         </div>
